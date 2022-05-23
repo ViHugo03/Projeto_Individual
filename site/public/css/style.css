@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.header {
+  border-bottom: 3px solid;
+  background-image: linear-gradient(black 20%,white);
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.agora {
+  text-shadow: 0 0 20px rgb(0, 68, 255);
+  font-weight: 800;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #ffffff;
+}
+
+.navbar li:hover{
+  cursor: pointer;
+  font-weight: bold;  
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+}
+
+.titulo {
+  color: #ffffff;
+  width: fit-content;
+  font-weight: 500;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.banner {
+  height: fit-content;
+  padding: 40px 0;
+  color: white;
+  background-image: url("https://cdn.pixabay.com/photo/2020/09/05/13/47/mountains-5546580_1280.jpg");
+  background-size: cover;
+  background-position-y:center ;
+}
+
+.banner .container {
+  height: 400px;
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+}
+.container1 {
+  display: flex;
+  height: 400px;
+  font-size: 36px;
+  justify-content:flex-start;
+  align-items: center;
+}
+.container1 p{
+  background-color: rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+}
+.banner .container1 span {
+  font-weight: 800;
+}
+
+.tamanho-conteudo { 
+  height: fit-content !important;
+}
+
+.banner p {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  font-size: 36px;
+}
+
+.banner .container span {
+  font-weight: 800;
+}
+
+.social {
+  background-color: #e5e5e5;
+  display: flex;
+}
+
+.social .container{
+  justify-content: center;
+}
+
+.box img {
+  background-size: cover;
+  width: 200 ;
+  height: 200px;
+}
+
+.social .container .boxes {
+  display: flex;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+
+.social p {
+  text-align: center;
+}
+
+.box {
+  margin: 50px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descricao{
+  margin-top: 30px;
+  margin-left:150px;
+ width: 700px;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+}
+
+.descricao h4{
+  text-align: center;
+  font-family: 'Courier New';
+  font-size: 40px;
+}
+
+.descricao p{
+  text-align: justify; 
+  font-family:Arial;
+  font-size: 20px;
+}
+
+.descricao a{
+  color: rgb(0, 153, 255);
+  
+}
+.descricao a:hover{
+  cursor: pointer;  
+  text-shadow: 0 0 20px white;
+  color: rgba(255, 0, 0, 0.767);
+
+}
+.descricao span{
+  color: rgb(0, 153, 255);
+}
+
+.footer {
+  background-color: #32b9cd;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+}
+
+.footer .container {
+  justify-content: center;
+}
+
+.banner .container .card {
+  background-color: #00000033;
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(77, 136, 183);
+  align-items: center;
+  border-radius: 10px;
+ background-image: linear-gradient( to top, rgba(255, 255, 255, 0.900) 10%,rgba(0, 0, 0, 0.800) ); 
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card h4 {
+  font-size: 16px;
+}
+
+.banner #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  color: rgba(255, 255, 255, 0.815);
+  width: 230px;
+  position: fixed;
+  padding: 10px;
+  margin-right: 51px;
+  background-color: rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.formulario .tipo_campo {
+  font-size: 20px;
+  font-weight: 600 !important;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  border: 2px solid #32b9cd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #e6005a;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+/* PAGINA DOS GRÁFICOS */
+
+.janela {
+  display: flex;
+  width: 100vw;
+}
+
+.header-left a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-right: 3px solid #32b9cd;
+  background-color: #212124;
+  /* border: 3px solid pink; */
+}
+
+.dash-right {
+  display: flex;
+  width: 75%;
+  height: fit-content;
+  background-color: #161618;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+
+.header-left h1 {
+  color: #32b9cd;
+}
+
+.hello {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hello h3 {
+  color: #e3b062;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.hello h3 span {
+  font-weight: 800;
+}
+
+.btn-nav {
+  width: 40%;
+  color: white;
+  background-color: #e6005a;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.btn-nav-white {
+  width: 40%;
+  background-color: white;
+  border: 3px solid #e6005a;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.btn-nav-white h3 {
+  color: #e6005a;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-nav h3,
+.btn-logout h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-logout {
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #32b9cd;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
