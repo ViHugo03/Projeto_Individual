@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="assets\icone-teclado.png">
+    <link rel="icon" href="imgs\icone-teclado.png">
     <title>Keyboard | Login</title>
 
     <script src="./js/funcoes.js"></script>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/aguarde-blue.gif">
+                    <img src="./imgs/aguarde-blue.gif">
                 </div>
 
                 <div id="div_erros_login">
@@ -134,7 +134,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "sala.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
