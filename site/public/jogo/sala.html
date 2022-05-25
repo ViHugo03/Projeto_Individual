@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+    href="assets\icone-teclado.png">
+<title>Keyboard | Classroom</title>
+</head>
+<body>
+    <div class="fundo">
+        <div id="explicação" class="explicação">
+            <h4> Seja bem vindo ao curso de Teclado da Keyboard</h4>
+
+            <p>Neste curso você terá aulas sobre: harmonia, regra de formaçõs de acordes Maiores, Menores, Aumentados e Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores Melódicas, Pentatônica, Penta Blues (Blue Note) e ao final de cada aula terá um quiz para testar se o conteúdo foi fixado, além de exercícios de treinamento para casa.
+            </p>
+            <p>Escolha a 1ª aula para começar </p>
+
+            <button onclick="aula1()">Aula 1</button><br><br>
+            <button onclick="aula2()">Aula 2</button><br><br>
+            <button onclick="aula3()">Aula 3</button>
+            <h4>Bons estudos</h4>
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    var pontos = 700;
+    function aula1(){
+        window.location = "aula1.html";
+    }
+    function aula2(){
+        if(pontos>= 700){
+            window.location = "aula2.html";
+        }
+        else{
+            alert("Você ainda não pode acessar essa aula")
+        }
+    }
+    function aula3(){
+
+    }
+</script>

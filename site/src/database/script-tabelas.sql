@@ -2,29 +2,31 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+CREATE DATABASE keyboard;
 
-USE acquatec;
+USE keyboard;
 
-CREATE TABLE usuario (
+CREATE TABLE aluno (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
+	cpf VARCHAR(11),
 	email VARCHAR(50),
 	senha VARCHAR(50)
 );
 
-CREATE TABLE aviso (
+CREATE TABLE professor (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+	nomeProf VARCHAR(50),
+	cpfProf VARCHAR(11),
+	cpfProf VARCHAR(11),
+	emailProf VARCHAR(50),
+	senhaProf VARCHAR(50)
 );
 
-create table aquario (
+create table curso (
 /* em nossa regra de negócio, um aquario tem apenas um sensor */
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+	nomeCurso VARCHAR(200)
 );
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */

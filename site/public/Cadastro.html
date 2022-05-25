@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAZlBMVEX///8AAAA1NTVDQ0PExMROTk4kJCTy8vKoqKgpKSlubm6ysrKSkpJpaWl5eXl/f39eXl7r6+u4uLiurq6bm5u+vr74+PgvLy9VVVUaGhoJCQnIyMhKSkpCQkJsbGyCgoLb29vPz89ZiRpwAAACIklEQVR4nO3dXVPaQBiA0UW+oqnaBBSBtrb//0+2KcuMLBuajqSUeJ4rJ282m+OF481OQpAkSZIkSZIkSZIkSZKkQVVNBtu2aoDL0ZBbhvB06Xfouafw5dKv0HPjsLn0K/TcJlz6DXqP8PrbC1d1+ba65Q/QfXJbvDxLLk/zq192t9Uv+fH09Pjr4Sblze7yuihz1atEOE7+DfiW3+VTclu8fJNcvsuvfozj1/z4Lo4f8+PPySbx1zh7zv8jM/6D8L4P4cNpwl748HfCOSEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEh4dUKO54o+TfClpcouwlbzqUWcVzkx8s4Lk+PzyT8nt1kkz6tRVjl37HqNp6fHp9JGOrcJj/Su1qEYZJbPek63ubGdbrHe4WhKouiWK4j4dfPRX18hqpNGOZ1s2K2G69/r54fjePDZ0fj52a8iKtHzbg8drxbuNsq7jLNj9uFu+IButuW8W2n1aOW8XmEc0JCQkJCQkJCQkJCQkLCQEhISEhISNhESEhISEhISEhISEhISNhESEhISEhISEhISEhISNhESPj/C6/h3FPHb3atFkWug7Nrxy3i6ll+9cHZtUxvz65lHr4/u9by8P1315b51el314Yb4fX3Ab5D2vIxxsE0/QDfAx7+N51DqLaX/nx2b23TM/ySJEmSJEmSJEmSJEmSdOX9BKONe0dNiYngAAAAAElFTkSuQmCC">
-    <title> Keybord | Cadastro</title>
+    <link rel="icon" href="assets\icone-teclado.png">
+    <title> Keyboard | Cadastro</title>
 
 
     <script src="./js/funcoes.js"></script>
@@ -25,7 +25,7 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <h1 class="titulo">Keybord</h1>
+            <h1 class="titulo">Keyboard</h1>
             <ul class="navbar">
                 <li>
                     <a href="Home.html">  Home
@@ -42,7 +42,14 @@
             </ul>
         </div>
     </div>
-    <!--header fim-->
+
+    <!--header fim
+    https://www.youtube.com/watch?v=7z_1UBJ82EY
+https://www.youtube.com/watch?v=GqJ7iNf9Xz0
+https://www.youtube.com/watch?v=uzv0V3qIUUA
+https://www.youtube.com/watch?v=1QPRzjaq584
+https://www.youtube.com/watch?v=074hI2WyYL0
+-->
 
 
     <div class="banner ">
@@ -73,14 +80,14 @@
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
 
-                    <span class="tipo_campo">Confirmação da Senha:</span>
+                    <span class="tipo_campo" >Confirmação da Senha:</span>
                     <input id="confirmacao_senha_input" type="password" placeholder="******">
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img src="./assets/aguarde-blue.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login">
@@ -110,11 +117,12 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
+        var cpfVar = cpf_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || cpfVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Todos os campos devem estar preenchidos";
 
@@ -135,6 +143,7 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
+                cpfServer: cpfVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })

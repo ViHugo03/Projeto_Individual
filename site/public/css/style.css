@@ -41,7 +41,7 @@ body {
 
 .navbar li:hover{
   cursor: pointer;
-  font-weight: bold;  
+  font-weight: bold;    
   text-shadow: 0 0 20px white;  
   text-shadow: 0 0 20px white;  
   text-shadow: 0 0 20px white;  
@@ -117,6 +117,7 @@ body {
 }
 
 .social .container .boxes {
+  margin-left: 30px;
   display: flex;
 }
 .social{
@@ -146,7 +147,7 @@ body {
 
 .descricao{
   margin-top: 30px;
-  margin-left:150px;
+  margin-left:350px;
  width: 700px;
  height: auto;
  display: flex;
@@ -173,14 +174,27 @@ body {
   cursor: pointer;  
   text-shadow: 0 0 20px white;
   color: rgba(255, 0, 0, 0.767);
-
 }
+
 .descricao span{
-  color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255)
+}
+.descricao .btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #40b7c9ba;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
 }
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #40b7c992;
   height: 80px;
   color: #fff;
   display: flex;
@@ -273,7 +287,7 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #40b7c9ba;
   width: 120px;
   align-self: center;
   margin-top: 5px;
@@ -291,102 +305,3 @@ input {
 }
 
 /* PAGINA DOS GRÁFICOS */
-
-.janela {
-  display: flex;
-  width: 100vw;
-}
-
-.header-left a {
-  text-decoration: none;
-  color: white;
-}
-
-.header-left {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  height: 100vh;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
-  /* border: 3px solid pink; */
-}
-
-.dash-right {
-  display: flex;
-  width: 75%;
-  height: fit-content;
-  background-color: #161618;
-  position: relative;
-  top: 0;
-  left: 25%;
-}
-
-.header-left h1 {
-  color: #32b9cd;
-}
-
-.hello {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hello h3 {
-  color: #e3b062;
-  font-weight: 300;
-  font-size: 1.2rem;
-}
-
-.hello h3 span {
-  font-weight: 800;
-}
-
-.btn-nav {
-  width: 40%;
-  color: white;
-  background-color: #e6005a;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
-}
-
-.btn-nav-white {
-  width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
-}
-
-.btn-nav-white h3 {
-  color: #e6005a;
-  padding: 0;
-  margin: 0;
-}
-
-.btn-nav h3,
-.btn-logout h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.btn-logout {
-  margin: 0;
-  padding: 0;
-  width: 20%;
-  background-color: #32b9cd;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px 15px;
-  margin-bottom: 100px;
-  cursor: pointer;
-}
