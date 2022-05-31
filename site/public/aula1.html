@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/icone-teclado.png">
+
+    <title> Keyboard | Aula 1</title>
+
+    <script src="js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/jogo.css">
+
+</head>
+
+<body >
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Keyboard</h1>
+            <ul class="navbar1">
+                <li>
+                    <button onclick="limparSessao()" class="btn">Sair</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div id="aula1" class="aula1">
+            <h2> Regra de Formação de Escalas Maiores</h2>
+
+            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom <br> 
+               <center> ou <br> T-T-St-T-T-T-St </center>
+            </p>
+
+            <p>As escalas Maiores são a base para todas as outras escalas, pois são a sequência natural das notas.</p>
+            
+            <p>A sequência citada acima, mostra a variação que ocorrerá entre as notas do campo harmônico.</p>
+
+            <p>Cada nota tem um valor de meio tom, para formar os acordes fazemos contas de meio em meio tom para saber quais notas serão usadas para compor a triade que forma o acorde.</p>
+
+            <p>Na próxima página veja um exemplo de formação da escala de Dó Maior(C).</p>
+            <button onclick="pg2()" class="btn2">Próxima</button>
+        </div>
+        <div id="aula2" class="aula1" style="display: none;">
+            <p>Triade: <br>
+                As tríades basicamente são um pequeno conjunto de 3 notas, elas formam os acordes que  conhecemos na música.</p>
+                <p>Usando a regra de formação das Escalas Maiores:</p>
+                <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom</p>
+                <p>Podemos formar a Escala de Dó Maior:</p>
+                <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"  style="background-size:cover ; width: 493px; height: 120px;">
+                <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas maiores vão seguir essa regra.</p>
+                <p>Exemplo: <br>
+                    1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+                </p>
+                <button onclick="voltar1()" class="btn2">Voltar</button>
+                <button onclick="pg3()" class="btn2">Próxima</button>
+        </div>
+        <div id="aula3" class="aula1" style="display: none;">
+           
+                <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"  style="background-size:cover ; width: 493px; height: 120px;">
+                <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas maiores vão seguir essa regra.</p>
+                <p>Exemplo: <br>
+                    1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+                </p>
+                <button onclick="voltar2()" class="btn2">Voltar</button>
+                <button onclick="pg4()" class="btn2">Próxima</button>
+        </div>
+        <div class="teste">
+        <div id="pontos" class="pontos" style="display: none;" >
+            <span id="msg">32545</span>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h4>Developed by Victor Hugo &hearts; SPTech &copy; 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function pg2(){
+        aula1.style.display = 'none';
+        aula2.style.display = 'block';
+    }
+    function voltar1(){
+        aula1.style.display = 'block';
+        aula2.style.display = 'none';
+    }
+    function pg3(){
+        aula2.style.display = 'none';
+        aula3.style.display = 'block';
+    }
+    function voltar2(){
+        aula2.style.display = 'block';
+        aula3.style.display = 'none';
+    }
+</script>

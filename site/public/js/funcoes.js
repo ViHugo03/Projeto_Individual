@@ -6,14 +6,13 @@ function validarSessao() {
     var nome = sessionStorage.NOME_USUARIO;
 
     var b_usuario = document.getElementById("b_usuario");
-
     if (email != null && nome != null) {
-        // window.alert(`Seja bem-vindo, ${nome}!`);
+         //window.alert(`Seja bem-vindo, ${nome}!`);
         b_usuario.innerHTML = nome;
 
         // finalizarAguardar();
     } else {
-        window.location = "../login.html";
+        window.location = "Login.html";
     }
 }
 
@@ -21,7 +20,7 @@ function limparSessao() {
     // aguardar();
     sessionStorage.clear();
     // finalizarAguardar();
-    window.location = "../login.html";
+    window.location = "Login.html";
 }
 
 // carregamento (loading)

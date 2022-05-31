@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/icone-teclado.png">    
+    <title> Keyboard | Classroom</title>
+
+    <link rel="stylesheet" href="css/jogo.css">
+
+    <script src="js/function.js"></script>
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body onload="validarSessao()">
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Keyboard</h1>
+            <ul class="navbar">
+                <li>
+                    <button onclick="aula1()" class="btn">Aula 1</button></li>
+                <li>
+                    <button onclick="aula2()" class="btn">Aula 2</button>
+                </li>
+                <li>
+                    <button onclick="aula3()" class="btn">Aula 3</button>
+                </li>
+                <li>
+                    <button onclick="limparSessao()" class="btn1">Sair</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <span id="b_usuario"></span>
+
+    <div class="banner">
+        <div id="sala" class="sala">
+            <h3> Seja bem vindo ao curso de Teclado da Keyboard</h3>
+
+            <p>Neste curso você terá aulas sobre: harmonia, regra de formaçõs de acordes Maiores, Menores, Aumentados e Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores Melódicas e ao final de cada aula terá um quiz para testar se o
+                conteúdo foi fixado, além de exercícios de treinamento para casa.
+            </p>
+
+            <h4>Bons Estudos</h4>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Developed by Victor Hugo &hearts;SPTech &copy; 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+
+
+
+    function aula1() {
+        window.location = "aula1.html";
+    }
+    function aula2() {
+        if (pontos1 >= 700) {
+            window.location = "aula2.html";
+        }
+        else {
+            alert("Você ainda não pode acessar essa aula")
+        }
+    }
+    function aula3() {
+        if (pontos2 >= 700) {
+            window.location = "aula3.html";
+        }
+        else {
+            alert("Você ainda não pode acessar essa aula")
+        }
+
+    }
+</script>
