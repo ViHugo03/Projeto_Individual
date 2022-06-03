@@ -25,13 +25,21 @@
     </div>
     <div class="banner">
         <div id="sala" class="sala">
-            <h3> Agora</h3>
-
-            <p>Neste curso você terá aulas sobre: harmonia, regra de formaçõs de acordes Maiores, Menores, Aumentados e Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores Melódicas e ao final de cada aula terá um quiz para testar se o
-                conteúdo foi fixado, além de exercícios de treinamento para casa.
+            <h3> Fixando a Máteria</h3>
+            <p>Agora você irá responder um quiz, para sabermos se você está preparado para ir para a próxima aula, fique tranquilo as perguntas que serão feitas estão relacionadas com o conteúdo ds aulas
             </p>
-
-            <h4>Bons Estudos</h4>
+            <h3>Bons Estudos</h3>
+        </div>
+        <div class="botao1" id="botao">
+            <button onclick="avancar(1)" class="btn2">Próxima</button>
+        </div>
+        <div id="sala1" class="sala" style="display: none;">
+           <div id="perguntas">
+               <span id="msg1">aregfdfbdz</span>
+           </div>
+        </div>
+        <div class="botao1" id="botao1" style="display: none;">
+            <button onclick="avancar(2)" class="btn2">Próxima</button>
         </div>
         <div class="teste">
             <div id="pontos" class="pontos">
@@ -39,38 +47,27 @@
             </div>
         </div>
     </div>
-
     <div class="footer">
         <div class="container">
             <h4>Developed by Victor Hugo &hearts;SPTech &copy; 2022</h4>
         </div>
     </div>
 </body>
-
 </html>
 <script>
-
-
-
-
-    function aula1() {
-        window.location = "aula1.html";
-    }
-    function aula2() {
-        if (pontos1 >= 700) {
-            window.location = "aula2.html";
-        }
-        else {
-            alert("Você ainda não pode acessar essa aula, pois ela está em desenvolvimento")
-        }
-    }
-    function aula3() {
-        if (pontos2 >= 700) {
-            window.location = "aula3.html";
-        }
-        else {
-            alert("Você ainda não pode acessar essa aula, pois ela está em desenvolvimento")
-        }
-
-    }
+    var pergunta =['Qual '];
+   function avancar(avanco) {
+       if (avanco == 1) {
+           sala.style.display = 'none';
+           botao.style.display = 'none';
+           sala1.style.display = 'flex';
+           botao1.style.display = 'flex';
+       }
+       if (avanco == 2) {
+          for (var i = 0; i >= 1; i++) {
+              msg1.innerHTML = `${pergunta.length[i-1]}`;  
+          }          
+       }
+       
+   }
 </script>
