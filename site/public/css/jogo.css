@@ -72,6 +72,8 @@ body {
     
 }
 
+
+
 .sala h3 {
     color: white;
     text-align: center;
@@ -132,7 +134,39 @@ body {
     margin: 9px;
 }
 /* fim aula 1 */
+/* comeco quiz */
+.quiz{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 450px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
 
+.quiz h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+}
+
+.quiz h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+
+}
+
+.quiz p {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 9px;
+}
 /* pontos */
 .pontos{
     padding: 10px;
@@ -214,11 +248,14 @@ background-color: black;
     margin-bottom: 10px;  
 }
 
-.perguntas{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+#perguntas{
+width: 80%;
+display: flex;
+margin-top: 10px;
+justify-content: center;
+background-color: red;
 }
+
 
 .botao1{
     display: flex;
