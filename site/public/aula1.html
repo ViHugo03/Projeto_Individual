@@ -10,11 +10,12 @@
     <title> Keyboard | Aula 1</title>
 
     <script src="js/funcoes.js"></script>
+    <script src="js/function.js"></script>
     <link rel="stylesheet" href="css/jogo.css">
 
 </head>
 
-<body >
+<body>
     <div class="header">
         <div class="container">
             <h1 class="titulo">Keyboard</h1>
@@ -31,48 +32,129 @@
         <div id="aula1" class="aula1">
             <h2> Regra de Formação de Escalas Maiores</h2>
 
-            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom <br> 
-               <center> ou <br> T-T-St-T-T-T-St </center>
+            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom <br>
+                <center> ou <br> T-T-St-T-T-T-St </center>
             </p>
 
             <p>As escalas Maiores são a base para todas as outras escalas, pois são a sequência natural das notas.</p>
-            
+
             <p>A sequência citada acima, mostra a variação que ocorrerá entre as notas do campo harmônico.</p>
 
-            <p>Cada nota tem um valor de meio tom, para formar os acordes fazemos contas de meio em meio tom para saber quais notas serão usadas para compor a triade que forma o acorde.</p>
+            <p>Cada nota tem um valor de meio tom, para formar os acordes fazemos contas de meio em meio tom para saber
+                quais notas serão usadas para compor a triade que forma o acorde.</p>
 
             <p>Na próxima página veja um exemplo de formação da escala de Dó Maior(C).</p>
-            <button onclick="pg2()" class="btn2">Próxima</button>
+           
+        </div>
+        <div class="botao" id="botao1">
+            <button onclick="avancar(1)" class="btn2">Próxima</button>
         </div>
         <div id="aula2" class="aula1" style="display: none;">
             <p>Triade: <br>
-                As tríades basicamente são um pequeno conjunto de 3 notas, elas formam os acordes que  conhecemos na música.</p>
-                <p>Usando a regra de formação das Escalas Maiores:</p>
-                <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom</p>
-                <p>Podemos formar a Escala de Dó Maior:</p>
-                <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"  style="background-size:cover ; width: 493px; height: 120px;">
-                <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas maiores vão seguir essa regra.</p>
-                <p>Exemplo: <br>
-                    1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
-                </p>
-                <button onclick="voltar1()" class="btn2">Voltar</button>
-                <button onclick="pg3()" class="btn2">Próxima</button>
+                As tríades basicamente são um pequeno conjunto de 3 notas, elas formam os acordes que conhecemos na
+                música.</p>
+            <p>Usando a regra de formação das Escalas Maiores:</p>
+            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom</p>
+            <p>Podemos formar a Escala de Dó Maior:</p>
+            <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"
+                style="background-size:cover ; width: 493px; height: 120px;">
+            <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas
+                maiores vão seguir essa regra.</p>
+            <p>Exemplo: <br>
+                1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+            </p>
+        </div>
+        <div class="botoes" id="botao2" style="display: none;">
+            <button onclick="voltar(1)" class="btn2">Voltar</button>
+            <button onclick="avancar(2)" class="btn2">Próxima</button>
         </div>
         <div id="aula3" class="aula1" style="display: none;">
+
+            <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"
+                style="background-size:cover ; width: 493px; height: 120px;">
+            <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas
+                maiores vão seguir essa regra.</p>
+            <p>Exemplo: <br>
+                1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+            </p>
+        </div>
+        <div class="botoes" id="botao3" style="display: none;">
+            <button onclick="voltar(2)" class="btn2">Voltar</button>
+            <button onclick="avancar(3)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula4" class="aula1" style="display: none;">
+            <h2> Regra de Formação de Escalas Maiores</h2>
+
+            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom <br>
+                <center> ou <br> T-T-St-T-T-T-St </center>
+            </p>
+
+            <p>As escalas Maiores são a base para todas as outras escalas, pois são a sequência natural das notas.</p>
+
+            <p>A sequência citada acima, mostra a variação que ocorrerá entre as notas do campo harmônico.</p>
+
+            <p>Cada nota tem um valor de meio tom, para formar os acordes fazemos contas de meio em meio tom para saber
+                quais notas serão usadas para compor a triade que forma o acorde.</p>
+
+            <p>Na próxima página veja um exemplo de formação da escala de Dó Maior(C).</p>
            
-                <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"  style="background-size:cover ; width: 493px; height: 120px;">
-                <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas maiores vão seguir essa regra.</p>
-                <p>Exemplo: <br>
-                    1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
-                </p>
-                <button onclick="voltar2()" class="btn2">Voltar</button>
-                <button onclick="pg4()" class="btn2">Próxima</button>
+        </div>
+        <div class="botoes" id="botao4" style="display: none;">
+            <button onclick="voltar(3)" class="btn2">Voltar</button>
+            <button onclick="avancar(4)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula5" class="aula1" style="display: none;">
+            <p>Triade: <br>
+                As tríades basicamente são um pequeno conjunto de 3 notas, elas formam os acordes que conhecemos na
+                música.</p>
+            <p>Usando a regra de formação das Escalas Maiores:</p>
+            <p>Tom-Tom-Semitom-Tom-Tom-Tom-Semitom</p>
+            <p>Podemos formar a Escala de Dó Maior:</p>
+            <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"
+                style="background-size:cover ; width: 493px; height: 120px;">
+            <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas
+                maiores vão seguir essa regra.</p>
+            <p>Exemplo: <br>
+                1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+            </p>
+        </div>
+        <div class="botoes" id="botao5"style="display: none;">
+            <button onclick="voltar(4)" class="btn2">Voltar</button>
+            <button onclick="avancar(5)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula6" class="aula1" style="display: none;">
+
+            <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"
+                style="background-size:cover ; width: 493px; height: 120px;">
+            <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas
+                maiores vão seguir essa regra.</p>
+            <p>Exemplo: <br>
+                1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+            </p>
+        </div>
+        <div class="botoes" id="botao6" style="display: none;">
+            <button onclick="voltar(5)" class="btn2">Voltar</button>
+            <button onclick="avancar(6)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula7" class="aula1" style="display: none;">
+
+            <img src="imgs/Intervalos-da-escala-de-Dó-maior-natural.png"
+                style="background-size:cover ; width: 493px; height: 120px;">
+            <p>Naturalmente identificamos as notas como graus, para melhorar o aprendizado já que todas as escalas
+                maiores vão seguir essa regra.</p>
+            <p>Exemplo: <br>
+                1º:Dó - 2º:Ré - 3º:Mi - 4º:Fá - 5º:Sol - 6º:Lá - 7º:Si
+            </p>
+        </div>
+        <div class="botoes" id="botao7" style="display: none;">
+            <button onclick="voltar(6)" class="btn2">Voltar</button>
+            <button onclick="avancar(7)" class="btn2">Próxima</button>
         </div>
         <div class="teste">
-        <div id="pontos" class="pontos" style="display: none;" >
-            <span id="msg">32545</span>
+            <div id="pontos" class="pontos" style="display: none;">
+                <span id="msg">42654625652632545</span>
+            </div>
         </div>
-    </div>
     </div>
     <div class="footer">
         <div class="container">
@@ -83,20 +165,86 @@
 
 </html>
 <script>
-    function pg2(){
-        aula1.style.display = 'none';
-        aula2.style.display = 'block';
+    function avancar(avanco) {
+        if (avanco == 1) {
+            aula1.style.display = 'none';
+            botao1.style.display = 'none';  
+            aula2.style.display = 'flex';
+            botao2.style.display = 'flex';
+        }
+        if (avanco == 2) {
+            aula2.style.display = 'none';
+            botao2.style.display = 'none';  
+            aula3.style.display = 'flex';
+            botao3.style.display = 'flex';
+        }
+        if (avanco == 3) {
+            aula3.style.display = 'none';
+            botao3.style.display = 'none';  
+            aula4.style.display = 'flex';
+            botao4.style.display = 'flex';
+        }
+        if (avanco == 4) {
+            aula4.style.display = 'none';
+            botao4.style.display = 'none';  
+            aula5.style.display = 'flex';
+            botao5.style.display = 'flex';
+        }
+        if (avanco == 5) {
+            aula5.style.display = 'none';
+            botao5.style.display = 'none';  
+            aula6.style.display = 'flex';
+            botao6.style.display = 'flex';
+        }
+        if (avanco == 6) {
+            aula6.style.display = 'none';
+            botao6.style.display = 'none';  
+            aula7.style.display = 'flex';
+            botao7.style.display = 'flex';
+        }
+        if (avanco == 7) {
+            aula7.style.display = 'none';
+            botao7.style.display = 'none';  
+            aula8.style.display = 'flex';
+            botao8.style.display = 'flex';
+        }
     }
-    function voltar1(){
-        aula1.style.display = 'block';
-        aula2.style.display = 'none';
-    }
-    function pg3(){
-        aula2.style.display = 'none';
-        aula3.style.display = 'block';
-    }
-    function voltar2(){
-        aula2.style.display = 'block';
-        aula3.style.display = 'none';
+    function voltar(volta) {
+        if (volta == 1) {
+            aula1.style.display = 'flex';
+            botao1.style.display = 'flex';              
+            aula2.style.display = 'none';
+            botao2.style.display = 'none';
+        }
+        if (volta == 2) {
+            aula2.style.display = 'flex';
+            botao2.style.display = 'flex';              
+            aula3.style.display = 'none';
+            botao3.style.display = 'none';
+        }
+        if (volta == 3) {
+            aula3.style.display = 'flex';
+            botao3.style.display = 'flex';              
+            aula4.style.display = 'none';
+            botao4.style.display = 'none';
+        }
+        if (volta == 4) {
+            aula4.style.display = 'flex';
+            botao4.style.display = 'flex';              
+            aula5.style.display = 'none';
+            botao5.style.display = 'none';
+        }
+        if (volta == 5) {
+            aula5.style.display = 'flex';
+            botao5.style.display = 'flex';              
+            aula6.style.display = 'none';
+            botao6.style.display = 'none';
+        }
+        if (volta == 6) {
+            aula6.style.display = 'flex';
+            botao6.style.display = 'flex';              
+            aula5.style.display = 'none';
+            botao5.style.display = 'none';
+        }
     }
 </script>
