@@ -30,7 +30,7 @@ fkAula int,
 foreign key(fkAluno) references aluno(idAluno),
 foreign key(fkAula) references aula(idAula),
 primary key(fkAluno,fkAula),
-notaAluno decimal(3,1)
+notaAluno int
 );
 
 insert into curso values

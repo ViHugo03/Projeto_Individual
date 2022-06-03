@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="imgs/icone-teclado.png">    
+    <link rel="icon" href="imgs/icone-teclado.png">
     <title> Keyboard | Classroom</title>
 
     <link rel="stylesheet" href="css/jogo.css">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="validarSessao()" >
+<body onload="validarSessao()">
     <div class="header">
         <div class="container">
             <h1 class="titulo">Keyboard</h1>
@@ -43,7 +43,9 @@
         <div id="sala" class="sala">
             <h3> Seja bem vindo ao curso de Teclado da Keyboard</h3>
 
-            <p>Neste curso você terá aulas sobre: harmonia, regra de formaçõs de acordes Maiores, Menores, Aumentados e Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores Melódicas e ao final de cada aula terá um quiz para testar se o
+            <p>Neste curso você terá aulas sobre: harmonia, regra de formaçõs de acordes Maiores, Menores, Aumentados e
+                Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores
+                Melódicas e ao final de cada aula terá um quiz para testar se o
                 conteúdo foi fixado, além de exercícios de treinamento para casa.
             </p>
 
@@ -65,33 +67,70 @@
 
 </html>
 <script>
-
-
-
-
     function aula1() {
         window.location = "aula1.html";
         sessionStorage.ID_AULA = 1;
     }
+
     function aula2() {
         sessionStorage.ID_AULA = 2;
 
         if (pontos1 >= 700) {
             window.location = "aula2.html";
-        }
-        else {
+        } else {
             alert("Você ainda não pode acessar essa aula, pois ela está em desenvolvimento")
         }
     }
+
     function aula3() {
         sessionStorage.ID_AULA = 3;
 
         if (pontos2 >= 700) {
             window.location = "aula3.html";
-        }
-        else {
+        } else {
             alert("Você ainda não pode acessar essa aula, pois ela está em desenvolvimento")
         }
 
     }
+    fetch("/usuarios/trazer", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idAluno:sessionStorage.ID_USUARIO
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.NOTA_ALUNO = json.notaAluna;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "sala.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
 </script>

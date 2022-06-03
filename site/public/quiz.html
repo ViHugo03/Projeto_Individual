@@ -58,7 +58,8 @@
 </body>
 </html>
 <script>
-    var pergunta =['Qual '];
+ 
+    var pergunta =['Qual é a regra de formação de escalas maiores',];
    function avancar(avanco) {
        if (avanco == 1) {
            quiz.style.display = 'none';
@@ -78,7 +79,7 @@
        
    }
    function Salvar(){
-    fetch("/usuarios/cadastrar", {
+    fetch("/usuarios/salvar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -86,36 +87,24 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                cpfServer: cpfVar,
-                cursoServer: cursoVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar
+                totalServer: totalVar,
+                idAlunoServer:sessionStorage.ID_USUARIO,
+                idAulaSrever: sessionStorage.ID_AULA
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
 
                 setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
-                
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
+                    window.location = "sala.html";
+                }, "2000")                
+          } 
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+           // finalizarAguardar();
         });
-
-        return false;
     }
    
 </script>

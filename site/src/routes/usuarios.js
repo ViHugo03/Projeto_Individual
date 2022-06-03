@@ -20,4 +20,11 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/salvar", function (req, res) {
+    usuarioController.salvar(req, res);
+})
+router.post("/trazer", function (req, res) {
+    usuarioController.trazer(req, res);
+})
+
 module.exports = router;
