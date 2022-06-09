@@ -47,4 +47,5 @@ select *from aluno;
 
 select * from aula;
 
-select * from AulaAluno;
+select fkAluno, notaAluno from AulaAluno WHERE fkAluno = idAluno;
+select notaAluno from AulaAluno join aluno on fkAluno = idAluno; 

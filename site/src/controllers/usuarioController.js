@@ -60,16 +60,10 @@ function entrar(req, res) {
 
 }
 function trazer(req, res) {
-    var id = req.body.emailServer;
-    var notaAluno = req.body.senhaServer;
+    var id = req.body.idAluno;
 
-    if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
-        res.status(400).send("Sua senha está indefinida!");
-    } else {
 
-        usuarioModel.entrar(email, senha)
+        usuarioModel.trazer(id)
             .then(
                 function (resultado) {
                     console.log(`\nResultados encontrados: ${resultado.length}`);
@@ -93,7 +87,7 @@ function trazer(req, res) {
             );
     }
 
-}
+
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
@@ -143,7 +137,7 @@ function salvar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var total = req.body.totalServer;
     var idAula = req.body.idAulaServer;
-    var idAluno = req.body.idAulaServer;
+    var idAluno = req.body.idAlunoServer;
     // Faça as validações dos valores
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.salvar(total,idAula,idAluno)
@@ -169,5 +163,6 @@ module.exports = {
     cadastrar,
     listar,
     testar,
-    salvar
+    salvar,
+    trazer
 }

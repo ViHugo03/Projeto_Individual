@@ -49,7 +49,7 @@ body {
 .banner {
     color: white;
     height: 80vh;
-    background-image: url("https://cdn.pixabay.com/photo/2020/09/05/13/47/mountains-5546580_1280.jpg");
+    background-image: url("../imgs/fundo-teclado.jpg");
     background-size: cover;
     background-position-y: center;
     display: flex;
@@ -164,6 +164,7 @@ body {
     color: white;
     font-family: Arial;
     font-size: 20px;
+    text-align: justify;
     line-height: 25px;
     margin: 9px;
 }
@@ -172,10 +173,12 @@ body {
     padding: 10px;
     display: flex;
     width: auto;  
-    height: 20px;
+    height: 30px;
+    border-radius: 5px ;
+    background-color: rgba(0, 0, 0, 0.315);    
 }
 .pontos #msg{
-background-color: black;
+    font-size: 20px;
 }
 /* botoes sala */
 
@@ -271,6 +274,42 @@ background-color: red;
     height: auto;
     top: 120px;
     right: 40px;
+}
+
+.notas{
+    display: flex;
+    width: 50%;
+    height:50%;
+    flex-direction: column;
+}
+
+.notas1{
+    display: flex;
+    width: 50%;
+    height:50%;
+    flex-direction: column;
+}
+
+.nota{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+.nota:hover{
+    cursor: pointer;
+    font-weight: bold;    
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px rgb(0, 0, 0);  
+   background-color: rgba(255, 255, 255, 0.555);
+}
+
+.teclado{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer {

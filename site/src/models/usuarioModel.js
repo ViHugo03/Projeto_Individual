@@ -33,11 +33,19 @@ function cadastrar(nome, cpf, email, senha, curso) {
 
 function salvar(total,idAula, idAluno) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function salvar():",total,idAula, idAluno);
-    
+
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
         INSERT INTO AulaAluno (fkAluno, fkAula, notaAluno)VALUES (${idAluno},${idAula},${total});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+function trazer(id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function trazer(): ", id)
+    var instrucao = `
+        SELECT notaAluno from  AulaAluno WHERE fkAluno = ${id}
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -48,4 +56,5 @@ module.exports = {
     cadastrar,
     listar,
     salvar,
+    trazer,
 };
