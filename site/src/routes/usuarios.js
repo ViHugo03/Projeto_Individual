@@ -26,5 +26,8 @@ router.post("/salvar", function (req, res) {
 router.post("/trazer", function (req, res) {
     usuarioController.trazer(req, res);
 })
+router.get("/ranking", function (req, res) {
+    usuarioController.ranking(req, res);
+});
 
 module.exports = router;
