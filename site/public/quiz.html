@@ -49,8 +49,7 @@
             <button onclick="verificar()" class="btn2">Validar resposta</button>
             <button onclick="salvar()" class="btn2" id="save" style="display: none; justify-content: center;">Salvar
                 pontuação</button>
-            <button onclick="refazer()" class="btn2" id="refazer"
-                style="display: none; justify-content: center;">Refazer Quiz</button>
+            <button onclick="refazer1()" class="btn2" id="refazer" style="display: none; justify-content: center;">Refazer Quiz</button>
         </div>
         <div class="teste">
             <div id="pontos" class="pontos">
@@ -259,19 +258,29 @@
                             "Parabéns, Você finalizou por completo a primeira aula, clique no botão salvar para ir para próxima aula"
                         )
                         save.style.display = 'flex';
-                    } else {
+                    } 
+                    else {
                         alert(
-                            "Você não Alcançou a pontuação necessária para ir para próxima aula, clique em refazer quiz para tentar novamente")
-                        refazer.style.display = 'flex'
+                            "Você não Alcançou a pontuação necessária para ir para próxima aula, clique em refazer quiz para tentar novamente"
+                        )
+                        refazer.style.display = 'flex';
                     }
-                } else {
+                }
+                else {                    
                     alert("Desculpe resposta incorreta")
                     totalVar -= 50;
-
+                    alert(
+                            "Você não Alcançou a pontuação necessária para ir para próxima aula, clique em refazer quiz para tentar novamente"
+                        )
+                        refazer.style.display = 'flex';
                 }
+            
+            } 
+                
 
-            }
-        } else {
+
+        }
+        else{
             alert("Insira alguma resposta")
         }
         msg.innerHTML = `Pontuação: ${totalVar}`
@@ -315,7 +324,7 @@
         }
     }
 
-    function refazer() {
+    function refazer1() {
         window.location.reload()
     }
 </script>
